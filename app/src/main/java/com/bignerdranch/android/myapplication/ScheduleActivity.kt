@@ -24,6 +24,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,7 +68,7 @@ class ScheduleActivity : AppCompatActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScheduleScreen(scheduleItems: List<Schedule>) {
-    var selectedDayOfWeek by remember { mutableStateOf(0) } // Состояние выбранного дня недели
+    var selectedDayOfWeek by rememberSaveable { mutableStateOf(0) } // Состояние выбранного дня недели
 
     Column(
         modifier = Modifier.padding(16.dp).fillMaxSize()

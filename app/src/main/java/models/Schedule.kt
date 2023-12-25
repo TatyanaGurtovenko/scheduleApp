@@ -16,8 +16,8 @@ data class Schedule(
     }
 
     companion object {
-        fun fromJson(json: String): User {
-            return Gson().fromJson(json, User::class.java)
+        fun fromJson(json: String): Schedule {
+            return Gson().fromJson(json, Schedule::class.java)
         }
     }
 }
